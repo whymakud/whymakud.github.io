@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WhyMakud Website</title>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+<meta name="language" content="ru">
+<link rel="icon" href="favicons/images-logo.png">
+<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+        form, fieldset, input, textarea, p, blockquote, th, td {
+            padding: 0;
+            margin: 0; }
+
+        a {
+            text-decoration: none;
+            color: #23262A; }
+
+        fieldset, img {
+            border: 0; }
+
+        strong {
+            font-weight: bold; }
+
+        ol, ul {
+            list-style: none;
+            margin: 0;
+            padding: 0; }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0; }
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow-x: hidden !important;
+            background-color: #26292D;
+            color: #EEEEEE;
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif; }
+
+        body ::-moz-selection {
+            background: #545659; }
+
+        body ::selection {
+            background: #545659; }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #EEEEEE; }
+
+        ::-webkit-scrollbar {
+            width: 0; }
+
+        @keyframes pulse {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1); }
+            60% {
+                -webkit-transform: scale(1.08);
+                transform: scale(1.08); }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1); } }
+
+
+        @keyframes spinstart {
+            0% {
+                width: 0px;
+                border-right: 0px; }
+            1% {
+                width: 0px;
+                border-right: 2px solid #00FF88; }
+            99% {
+                width: 260px;
+                border-right: 2px solid #00FF88; }
+            100% {
+                width: 260px;
+                border-right: 0px; } }
+
+
+        @keyframes spin1 {
+            0% {
+                width: 0px;
+                border-right: 0px; }
+            1% {
+                width: 0px; }
+            99% {
+                width: 360px; }
+            100% {
+                width: 360px;
+                border-right: 0px; } }
+
+
+        @keyframes spin2 {
+            0% {
+                width: 0px;
+                border-right: 0px; }
+            1% {
+                width: 0px; }
+            99% {
+                width: 170px; }
+            100% {
+                width: 170px;
+                border-right: 0px; } }
+
+        @keyframes spin3 {
+            0% {
+                width: 0px;
+                border-right: 0px; }
+            1% {
+                width: 0px;
+                border-right: 2px solid #00FF88; }
+            99% {
+                width: 144px; }
+            100% {
+                width: 144px;
+                border-right: 0px; } }
+
+        @keyframes pulseOpacity {
+            0% {
+                opacity: 0; }
+            50% {
+                opacity: 1; }
+            100% {
+                opacity: 0; } }
+
+        @keyframes initOpacity {
+            0% {
+                opacity: 0; }
+            100% {
+                opacity: 1; } }
+
+        .nooder-protection {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0); }
+        .nooder-protection-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 40px;
+            animation-name: pulse;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; }
+        .nooder-protection .terminal {
+            width: 90%;
+            margin: auto;
+            max-width: 760px; }
+        .nooder-protection .terminal .terminal-header {
+            position: relative;
+            background-color: #585858;
+            height: 30px;
+            line-height: 30px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            padding-left: 10px; }
+        .nooder-protection .terminal .terminal-header .close, .nooder-protection .terminal .terminal-header .other {
+            margin-left: 5px;
+            position: relative;
+            top: 50%;
+            transform: translate3d(0, -50%, 0); }
+        .nooder-protection .terminal .terminal-header .close {
+            background-color: #E55B2C;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%; }
+        .nooder-protection .terminal .terminal-header .other {
+            background-color: #85847E;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%; }
+        .nooder-protection .terminal .terminal-header .conn {
+            color: #EEEEEE;
+            margin-left: 12px;
+            font-size: 12px; }
+        .nooder-protection .terminal .terminal-content {
+            position: relative;
+            background-color: #1A1A1A;
+            padding: 15px;
+            color: #00FF88;
+            font-weight: bold;
+            min-height: 300px; }
+        .nooder-protection .terminal .terminal-content .welcome {
+            text-align: center;
+            margin-bottom: 20px;
+            animation-name: initOpacity;
+            animation-duration: 1s;
+            animation-iteration-count: 1; }
+        .nooder-protection .terminal .terminal-content span {
+            animation-name: pulseOpacity;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; }
+        .nooder-protection .terminal .terminal-content .input-start {
+        	white-space: nowrap;
+            height: 19px;
+            font-size: 16px;
+            position: absolute;
+            left: 15px;
+            border-right: 2px solid #00FF88;
+            overflow: hidden;
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: spinstart; }
+        .nooder-protection .terminal .terminal-content .input-1 {
+        	white-space: nowrap;
+            margin-top: 24px;
+            height: 19px;
+            font-size: 16px;
+            position: absolute;
+            left: 15px;
+            border-right: 2px solid #00FF88;
+            overflow: hidden;
+            animation-delay: 2s;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: spin1; }
+        .nooder-protection .terminal .terminal-content .input-2 {
+        	white-space: nowrap;
+            margin-top: 48px;
+            height: 19px;
+            font-size: 16px;
+            position: absolute;
+            left: 15px;
+            border-right: 2px solid #00FF88;
+            overflow: hidden;
+            animation-delay: 3s;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: spin2; }
+        .nooder-protection .terminal .terminal-content .input-3 {
+        	white-space: nowrap;
+            margin-top: 72px;
+            height: 19px;
+            font-size: 16px;
+            position: absolute;
+            left: 15px;
+            border-right: 2px solid #00FF88;
+            overflow: hidden;
+            animation-delay: 3.5s;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: spin3; }
+	</style>
+<body>
+<main class="nooder-protection">
+<h1 class="nooder-protection-title">whymakud.github.io</h1>
+<div class="terminal">
+<div class="terminal-header">
+<span class="close"></span>
+<span class="other"></span>
+<span class="other"></span>
+<span class="conn">root@whymakud: ~</span>
+</div>
+<div class="terminal-content">
+<p class="welcome">/* Telegram: @whymakud */</p>
+<p class="input-start">root@whymakud: ~$ sh info.sh</p>
+<p class="input-1">there's nothing here...</p>
+<p class="input-2">whymakud.sh done &#10003;</p>
+<p class="input-3">root@whymakud: ~$</p>
+</div>
+</div>
+</main>
+<script data-cfasync="false" src="js/cloudflare-static-email-decode.min.js"></script></body></html>
